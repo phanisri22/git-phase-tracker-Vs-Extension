@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <!-- A clean visual representation of Git branch lanes moving from stages -->
+  <!-- Main horizontal trunk line -->
+  <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Curved branching-off lane (representing stashing or branching) -->
+  <path d="M12,12 C14,8 16,6 19,6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Stages as solid circles -->
+  <circle cx="5" cy="12" r="2.5" fill="currentColor"/>
+  <circle cx="12" cy="12" r="2.5" fill="currentColor"/>
+  <circle cx="19" cy="12" r="2.5" fill="currentColor"/>
+  <circle cx="19" cy="6" r="2.5" fill="currentColor"/>
+</svg>

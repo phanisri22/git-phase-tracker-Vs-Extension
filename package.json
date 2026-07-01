@@ -1,0 +1,51 @@
+{
+  "name": "git-phase-tracker",
+  "displayName": "Git Phase Tracker",
+  "description": "Visualize your Git workflow stages (Workspace, Staging, Local, Remote, Stash) and interactive cheat sheet in the sidebar.",
+  "version": "0.1.0",
+  "publisher": "antigravity",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "git-phase-tracker-sidebar",
+          "title": "Git Phase Tracker",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "git-phase-tracker-sidebar": [
+        {
+          "type": "webview",
+          "id": "gitPhaseTrackerView",
+          "name": "Git Stage Flow"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "git-phase-tracker.refresh",
+        "title": "Refresh Git Phase Flow",
+        "icon": "$(refresh)"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@types/vscode": "^1.75.0",
+    "typescript": "^4.9.4"
+  }
+}
